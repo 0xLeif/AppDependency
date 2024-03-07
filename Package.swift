@@ -1,23 +1,35 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.9
 
 import PackageDescription
 
 let package = Package(
     name: "AppDependency",
+    platforms: [
+        .iOS(.v15),
+        .watchOS(.v8),
+        .macOS(.v11),
+        .tvOS(.v15),
+        .visionOS(.v1)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "AppDependency",
-            targets: ["AppDependency"]),
+            targets: ["AppDependency"]
+        )
+    ],
+    dependencies: [
+        .package(url: "https://github.com/0xLeif/Cache", from: "2.0.0")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "AppDependency"),
+            name: "AppDependency",
+            dependencies: [
+                "Cache"
+            ]
+        ),
         .testTarget(
             name: "AppDependencyTests",
-            dependencies: ["AppDependency"]),
+            dependencies: ["AppDependency"]
+        )
     ]
 )
