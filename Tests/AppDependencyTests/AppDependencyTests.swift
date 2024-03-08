@@ -1,4 +1,3 @@
-/// Mirror of [AppState.AppDependencyTests](https://github.com/0xLeif/AppState/blob/main/Tests/AppStateTests/AppDependencyTests.swift)
 import XCTest
 @testable import AppDependency
 

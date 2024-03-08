@@ -1,4 +1,3 @@
-/// Mirror of [AppState.ObservedDependencyTests](https://github.com/0xLeif/AppState/blob/main/Tests/AppStateTests/ObservedDependencyTests.swift)
 #if !os(Linux) && !os(Windows)
 import SwiftUI
 import XCTest

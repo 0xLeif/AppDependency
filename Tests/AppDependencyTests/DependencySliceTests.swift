@@ -1,4 +1,3 @@
-/// Mirror of [AppState.DependencySliceTests](https://github.com/0xLeif/AppState/blob/main/Tests/AppStateTests/DependencySliceTests.swift)
 import Foundation
 #if !os(Linux) && !os(Windows)
 import SwiftUI
