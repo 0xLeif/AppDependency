@@ -1,5 +1,5 @@
 extension Application {
-    /// `DependencySlice` allows access and modification to a specific part of an AppState's dependencies. Supports `Dependency`.
+    /// `DependencySlice` allows access and modification to a specific part of an AppDependency's dependencies. Supports `Dependency`.
     public struct DependencySlice<
         Value,
         SliceValue,

@@ -12,10 +12,10 @@ open class Application: NSObject {
     static var shared: Application = Application()
 
     #if !os(Linux) && !os(Windows)
-    /// Logger specifically for AppState
-    public static let logger: Logger = Logger(subsystem: "AppState", category: "Application")
+    /// Logger specifically for AppDependency
+    public static let logger: Logger = Logger(subsystem: "AppDependency", category: "Application")
     #else
-    /// Logger specifically for AppState
+    /// Logger specifically for AppDependency
     public static let logger: ApplicationLogger = ApplicationLogger()
     #endif
 
