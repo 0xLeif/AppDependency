@@ -55,11 +55,11 @@ extension Application {
         guard isLoggingEnabled else { return }
 
         let excludedFileIDs: [String] = [
-            "AppState/Application+StoredState.swift",
-            "AppState/Application+SyncState.swift",
-            "AppState/Application+SecureState.swift",
-            "AppState/Application+Slice.swift",
-            "AppState/Application+FileState.swift",
+            "AppDependency/Application+StoredState.swift",
+            "AppDependency/Application+SyncState.swift",
+            "AppDependency/Application+SecureState.swift",
+            "AppDependency/Application+Slice.swift",
+            "AppDependency/Application+FileState.swift",
         ]
         let isFileIDValue: Bool = excludedFileIDs.contains(fileID.description) == false
 

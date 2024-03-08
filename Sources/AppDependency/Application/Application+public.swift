@@ -290,17 +290,17 @@ public extension Application {
 
 extension Application {
     /**
-     This function creates a `DependencySlice` of AppState that allows access to a specific part of the AppState's dependencies. It provides granular control over the AppState.
+     This function creates a `DependencySlice` of AppDependency that allows access to a specific part of the AppDependency's dependencies. It provides granular control over the AppDependency.
 
      - Parameters:
-         - dependencyKeyPath: A KeyPath pointing to the dependency in AppState that should be sliced.
+         - dependencyKeyPath: A KeyPath pointing to the dependency in AppDependency that should be sliced.
          - valueKeyPath: A KeyPath pointing to the specific part of the state that should be accessed.
          - fileID: The identifier of the file.
          - function: The name of the declaration.
          - line: The line number on which it appears.
          - column: The column number in which it begins.
 
-     - Returns: A Slice that allows access to a specific part of an AppState's state.
+     - Returns: A Slice that allows access to a specific part of an AppDependency's state.
      */
     public static func dependencySlice<Value, SliceValue>(
         _ dependencyKeyPath: KeyPath<Application, Dependency<Value>>,
@@ -335,17 +335,17 @@ extension Application {
     }
 
     /**
-     This function creates a `DependencySlice` of AppState that allows access to a specific part of the AppState's dependencies. It provides granular control over the AppState.
+     This function creates a `DependencySlice` of AppDependency that allows access to a specific part of the AppDependency's dependencies. It provides granular control over the AppDependency.
 
      - Parameters:
-         - dependencyKeyPath: A KeyPath pointing to the dependency in AppState that should be sliced.
+         - dependencyKeyPath: A KeyPath pointing to the dependency in AppDependency that should be sliced.
          - valueKeyPath: A KeyPath pointing to the specific part of the state that should be accessed.
          - fileID: The identifier of the file.
          - function: The name of the declaration.
          - line: The line number on which it appears.
          - column: The column number in which it begins.
 
-     - Returns: A Slice that allows access to a specific part of an AppState's state.
+     - Returns: A Slice that allows access to a specific part of an AppDependency's state.
      */
     public static func dependencySlice<Value, SliceValue>(
         _ dependencyKeyPath: KeyPath<Application, Dependency<Value>>,

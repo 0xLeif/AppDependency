@@ -1,4 +1,4 @@
-/// A property wrapper that provides access to a specific part of the AppState's dependencies.
+/// A property wrapper that provides access to a specific part of the AppDependency's dependencies.
 @propertyWrapper public struct DependencyConstant<Value, SliceValue, SliceKeyPath: KeyPath<Value, SliceValue>> {
     /// Path for accessing `Dependency` from Application.
     private let dependencyKeyPath: KeyPath<Application, Application.Dependency<Value>>
@@ -25,10 +25,10 @@
     }
 
     /**
-     Initializes a Constant with the provided parameters. This constructor is used to create a Constant that provides access and modification to a specific part of an AppState's dependencies. It provides granular control over the AppState.
+     Initializes a Constant with the provided parameters. This constructor is used to create a Constant that provides access and modification to a specific part of an AppDependency's dependencies. It provides granular control over the AppDependency.
 
      - Parameters:
-         - dependencyKeyPath: A KeyPath that points to the dependency in AppState that should be sliced.
+         - dependencyKeyPath: A KeyPath that points to the dependency in AppDependency that should be sliced.
          - valueKeyPath: A KeyPath that points to the specific part of the dependency that should be accessed.
      */
     public init(
@@ -56,10 +56,10 @@
     }
 
     /**
-     Initializes a Constant with the provided parameters. This constructor is used to create a Constant that provides access and modification to a specific part of an AppState's dependencies. It provides granular control over the AppState.
+     Initializes a Constant with the provided parameters. This constructor is used to create a Constant that provides access and modification to a specific part of an AppDependency's dependencies. It provides granular control over the AppDependency.
 
      - Parameters:
-         - dependencyKeyPath: A KeyPath that points to the dependency in AppState that should be sliced.
+         - dependencyKeyPath: A KeyPath that points to the dependency in AppDependency that should be sliced.
          - valueKeyPath: A WritableKeyPath that points to the specific part of the state that should be accessed.
      */
     public init(
