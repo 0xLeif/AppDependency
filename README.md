@@ -157,20 +157,42 @@ func testNetworkService() {
 }
 ```
 
-## Promoting the Application
+### SwiftUI Previews
 
-In AppDependency, you have the ability to promote your custom Application subclass to a shared singleton instance. This can be particularly useful when your Application subclass needs to conform to a protocol.
-
-Here's an example of how to use the `promote` function:
+To override a dependency inside a SwiftUI preview, you must use the Environment.preview function and pass in the dependency overrides with the content.
 
 ```swift
-class CustomApplication: Application {
-    func customFunction() { ... }
+class Service {
+    var title: String { "Live Service" }
 }
 
-Application.promote(to: CustomApplication.self)
-```
+class MockService: Service {
+    override var title: String { "Mock Service" }
+}
 
+extension Application {
+    var service: Dependency<Service> {
+        dependency(Service())
+    }
+}
+
+struct ContentView: View {
+    @AppDependency(\.service) private var service
+
+    var body: some View {
+        Text(service.title)
+    }
+}
+
+#Preview {
+    Application.preview(
+        Application.override(\.service, with: MockService()),
+        Application.override(\.userDefaults, with: UserDefaults())
+    ) {
+        ContentView()
+    }
+}
+```
 
 ## License
 
