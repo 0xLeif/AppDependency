@@ -199,7 +199,7 @@ struct ContentView: View {
 
 ## License
 
-AppDependency is released under the MIT License. See [LICENSE](https://github.com/0xLeif/AppDependency/blob/main/LICENSE) for more information.
+AppDependency is released under the MIT License. See [LICENSE](https://github.com/0xLeif/AppDependency/blob/main/LICENSE.md) for more information.
 
 ## Communication and Contribution
 
